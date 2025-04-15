@@ -20,7 +20,7 @@ FlowLogAnalyzer parses the log file and maps each log to a tag based on the data
 ## Steps to Compile & Run
 1. make test     =>    This will run the UT code against the source file. This will catch any UT bugs.
 2. make          =>    This will compile and run the code for 500K VPC logs file and generate the corresponding output files in output/ dir.
-3. make functest =>    This will run the code for FT data. FT verification script is not done. Manual verification done.
+3. make functest =>    This will run the code for FT data. FT verification script is not done. Manual verification done for both tag_count and port_count.
 
 ## Asymptotoic analysis
 1. load_protocol_map => parses the spec line by line and for each line, it stores the protocol number and the corresponding string in Hashmap. - O(n) * (m)
