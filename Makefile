@@ -11,13 +11,17 @@ CD = cd target/
 RUN = ./flowlog_tagger
 TAG_COUNT = ./output/tag_count.csv
 PORT_COUNT = ./output/port_count.csv
-
+ARGS = ../src/specifications/protocol-numbers-1.csv ../src/generators/unique_random_lookup_table_100k.csv ../src/generators/vpc_sample_logs_500k.txt
+FTARGS = ../src/specifications/protocol-numbers-1.csv ../src/generators/ft_lookup_table.csv ../src/generators/ft_sample_logs.csv
 
 all: $(TARGET)
-	$(CD) && $(RUN)
+	$(CD) && $(RUN) $(ARGS)
 
 test: $(TEST)
 		$(TEST)
+
+functest: $()
+		$(CD) && $(RUN) $(FTARGS)
 
 $(TARGET): $(MAIN) $(SRC)
 	$(CXX) $(CXXFLAGS) -o $@ $^ -v
