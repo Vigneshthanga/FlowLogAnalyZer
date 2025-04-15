@@ -123,7 +123,6 @@ std::unordered_map<PortProtocolPair, unsigned long long> count_port_proto(const 
 			else {
 				port = std::stoul(tokens[5]);
 			}
-			std::cout << line << " " << port << std::endl;
         	std::string proto = protocol_map[std::stoul(tokens[7])];
 
         	PortProtocolPair pair(port, proto);

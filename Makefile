@@ -4,7 +4,7 @@ CXXTFLAGS = -std=c++17 -I/opt/homebrew/opt/googletest/include -L/opt/homebrew/op
 TARGET = ./target/flowlog_tagger
 SRC = ./src/flowlog_tagger.cpp
 MAIN = ./src/main.cpp
-SRCTEST = ./src/test/test_load_protocol_map.cpp
+SRCTEST = ./src/test/test_flowlog_tagger.cpp
 TEST = ./target/test_runner
 LGFLAGS = -lgtest -lgtest_main -pthread
 CD = cd target/
